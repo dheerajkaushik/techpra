@@ -1,0 +1,22 @@
+public class BankAccount {
+
+    private int balance;
+
+    void deposit(int amount){
+        balance+=amount;
+    }
+
+    int getBalance() {
+        return balance;
+    }
+
+}
+
+class main{
+    public static void main(String[] args) {
+        BankAccount b= new BankAccount();
+        b.deposit(100);
+        System.out.println("balance is"+b.getBalance());
+
+    }
+}
