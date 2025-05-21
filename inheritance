@@ -1,0 +1,60 @@
+ class employee {
+
+    String name;
+    int id;
+    void work(){
+        System.out.println(name+"is working");
+    }
+    employee(){
+        System.out.println("hellooo");
+    }
+
+     
+}
+
+class professor extends employee{
+    
+    employee(){
+        System.out.println("ytfghb");
+        super("");
+    }
+    String subject;
+    void teach(){
+        System.out.println(name+"teach"+ subject);
+    }
+    
+}
+class adminstaff extends employee{
+String depart;
+void manage(){
+    System.out.println("name is managing ");
+}
+}
+
+
+
+public class work2{
+public static void main(String[] args) {
+    professor p1= new professor();
+    adminstaff a1=new adminstaff();
+    p1.id=1;
+    p1.name="rahul";
+    p1.subject="java";
+    p1.teach();
+    p1.work();
+
+    a1.name="hello";
+    a1.depart="cse";
+    a1.work();
+    a1.manage();
+    
+
+
+
+
+        
+    }
+}
+
+    
+
