@@ -1,0 +1,58 @@
+abstract class payment{
+
+    double amount;
+    payment( double amount){
+        this.amount=amount;
+
+    }
+    abstract void makepayment();
+
+    
+} 
+
+class creditcardpayment extends payment{
+    creditcardpayment( double amount){
+        super(amount);
+
+    }
+    @Override
+    void makepayment() {
+        System.out.println("paid"+ amount+ "using creditcard");
+        
+    }
+
+
+
+    
+}
+
+class Upi extends payment {
+    Upi(double amount){
+        super(amount);
+
+       
+
+
+    }
+     void makepayment(){
+            System.out.println(amount+ "paid by upi");
+
+        }
+
+    
+}
+
+public class fix{
+    public static void main(String[] args) {
+        
+        payment p=new creditcardpayment(200);
+        p.makepayment();
+         payment p2= new Upi(2000);
+         p2.makepayment();
+
+    }
+}
+
+
+    
+
